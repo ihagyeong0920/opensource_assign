@@ -11,6 +11,11 @@ if any(c.isupper() for c in password):
   score += 1
 else:
   print("대문자가 포함되어 있지 않습니다.")
+
+if any(c.islower() for c in password):
+  score += 1
+else:
+  print("소문자가 포함되어 있지 않습니다.")
   
 if any(c.isdigit() for c in password):
   score += 1
@@ -19,7 +24,7 @@ else:
 
 if score == 4:
   print("비밀번호 강도 : 강함")
-elif socre >= 2:
+elif score >= 2:
   print("비밀번호 강도 : 보통")
 else:
   print("비밀번호 강도 : 약함")
